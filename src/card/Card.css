@@ -1,0 +1,72 @@
+@charset "UTF-8";
+.cardContainer {
+  width: 20rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cardContainer #cardImage {
+  width: 100%;
+}
+.cardContainer #inf-Container {
+  padding: 1rem;
+}
+.cardContainer #inf-Container .level-Attribute {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.cardContainer #inf-Container .level-Attribute #level-Container {
+  /* Estilos para o container de níveis */
+}
+.cardContainer #inf-Container .level-Attribute #level-Container #level {
+  width: 1.6rem;
+}
+.cardContainer #inf-Container .level-Attribute #cardAttribute {
+  width: 1.6rem;
+}
+.cardContainer #inf-Container .atkDef-Container {
+  width: 100%;
+  font-size: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.cardContainer #inf-Container .atkDef-Container span {
+  padding: 0.5rem 1rem;
+  border: solid 2px #954708;
+}
+
+#monster {
+  background-color: rgb(186, 153, 50);
+}
+
+#spell {
+  background-color: #138a3d;
+}
+#spell #inf-Container {
+  padding: 1rem;
+}
+#spell #inf-Container .level-Attribute {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#spell #inf-Container .level-Attribute #level-Container {
+  /* Estilos para o container de níveis */
+  display: none;
+}
+#spell #inf-Container .level-Attribute #level-Container #level {
+  width: 1.6rem;
+}
+#spell #inf-Container .level-Attribute #cardAttribute {
+  width: 1.6rem;
+}
+#spell #inf-Container .atkDef-Container {
+  display: none;
+}
+
+#trap {
+  background-color: #93187A;
+}/*# sourceMappingURL=Card.css.map */

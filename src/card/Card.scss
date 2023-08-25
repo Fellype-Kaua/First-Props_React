@@ -1,0 +1,82 @@
+.cardContainer {
+    width: 20rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #cardImage {
+        width: 100%;
+    }
+
+    #inf-Container {
+        padding: 1rem;
+
+        .level-Attribute {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            #level-Container {
+                /* Estilos para o container de níveis */
+                #level {
+                    width: 1.6rem;
+                }
+            }
+
+            #cardAttribute {
+                width: 1.6rem;
+            }
+        }
+
+        .atkDef-Container {
+            width: 100%;
+            font-size: 8rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            
+            span {
+                padding: 0.5rem 1rem;
+                border: solid 2px #954708;
+            }
+        }
+    }
+}
+
+#monster {
+    background-color: rgb(186, 153, 50);
+}
+
+#spell {
+    background-color: #138a3d;
+    #inf-Container {
+        padding: 1rem;
+
+        .level-Attribute {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            #level-Container {
+                /* Estilos para o container de níveis */
+                display: none;
+                #level {
+                    width: 1.6rem;
+                }
+            }
+
+            #cardAttribute {
+                width: 1.6rem;
+            }
+        }
+
+        .atkDef-Container {
+            display: none;
+        }
+    }
+}
+
+#trap{
+    background-color: #93187A;
+}
