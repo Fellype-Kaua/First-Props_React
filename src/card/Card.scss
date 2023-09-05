@@ -1,16 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+
+$bgInfColor: rgb(255, 255, 255, 0.6);
+
 .cardContainer {
     width: 20rem;
-    height: auto;
+    height: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     #cardImage {
         width: 100%;
+        border: 5px;
+        border-style: groove;
     }
 
     #inf-Container {
+        max-width: 100%;
         padding: 1rem;
+        border: rgba(128, 128, 128, 0.5) groove 5px;
+        border-top: none;
 
         .level-Attribute {
             width: 100%;
@@ -35,10 +46,12 @@
             display: flex;
             align-items: center;
             justify-content: space-around;
-            
+            gap: 0.5rem;
+
             span {
                 padding: 0.5rem 1rem;
-                border: solid 2px #954708;
+                border: groove 3px #954708;
+                background-color: $bgInfColor;
             }
         }
     }
@@ -48,26 +61,35 @@
     background-color: rgb(186, 153, 50);
 }
 
-#spell {
-    background-color: #138a3d;
+@mixin spellTrap{
     #inf-Container {
         padding: 1rem;
-
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        
         .level-Attribute {
             display: flex;
             justify-content: center;
             align-items: center;
 
             #level-Container {
-                /* Estilos para o container de níveis */
                 display: none;
-                #level {
-                    width: 1.6rem;
-                }
             }
 
-            #cardAttribute {
-                width: 1.6rem;
+            .attributeContainer {
+                background-color: $bgInfColor;
+                border: 3px #CA9739 groove;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+                #cardAttribute {
+                    width: 3rem;
+                }
             }
         }
 
@@ -77,6 +99,14 @@
     }
 }
 
-#trap{
-    background-color: #93187A;
+#spell {
+    background-color: #138a3d;
+   @include spellTrap();
+}
+
+#trap {
+    background-color: #93187a;
+    @include spellTrap();
+    #cardImage{
+    }
 }

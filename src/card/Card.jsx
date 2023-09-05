@@ -15,7 +15,9 @@ function Card(props) {
           <div id="level-Container">
             {levelArray}
           </div>
+          <div className="attributeContainer">
           <img src={props.attribute} alt="Light" id="cardAttribute" />
+          </div>
         </div>
 
         <div className="atkDef-Container">
