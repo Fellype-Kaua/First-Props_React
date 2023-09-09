@@ -6,11 +6,13 @@ $bgInfColor: rgb(255, 255, 255, 0.6);
 
 .cardContainer {
     width: 20rem;
-    height: 30rem;
+    height: 28rem;
+    max-height: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    overflow: hidden;
+    margin-left: 5rem;
     #cardImage {
         width: 100%;
         border: 5px;
@@ -18,10 +20,15 @@ $bgInfColor: rgb(255, 255, 255, 0.6);
     }
 
     #inf-Container {
+        width: 100%;
+        padding-top: 0.5rem;
         max-width: 100%;
-        padding: 1rem;
+        height: 100%;
         border: rgba(128, 128, 128, 0.5) groove 5px;
         border-top: none;
+        display: flex;
+        flex-direction: column;
+        
 
         .level-Attribute {
             width: 100%;
@@ -30,8 +37,11 @@ $bgInfColor: rgb(255, 255, 255, 0.6);
 
             #level-Container {
                 /* Estilos para o container de níveis */
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
                 #level {
-                    width: 1.6rem;
+                    width: 1rem;
                 }
             }
 
@@ -52,6 +62,11 @@ $bgInfColor: rgb(255, 255, 255, 0.6);
                 padding: 0.5rem 1rem;
                 border: groove 3px #954708;
                 background-color: $bgInfColor;
+                width: 8rem;
+                height: 5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     }
@@ -68,6 +83,7 @@ $bgInfColor: rgb(255, 255, 255, 0.6);
         height: 100%;
         display: flex;
         align-items: center;
+        justify-content: center;
         
         .level-Attribute {
             display: flex;

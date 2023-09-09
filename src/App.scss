@@ -9,3 +9,16 @@
     display: flex;
     gap: 1rem;
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 5rem;
+    div{
+        margin: 0.5rem;
+        input{
+          width: 100%;  
+        }
+    }
+}

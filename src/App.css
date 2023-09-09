@@ -9,4 +9,17 @@
   width: 100dvw;
   display: flex;
   gap: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 5rem;
+}
+form div {
+  margin: 0.5rem;
+}
+form div input {
+  width: 100%;
 }/*# sourceMappingURL=App.css.map */
