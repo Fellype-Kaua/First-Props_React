@@ -3,7 +3,7 @@ import "./Card.css";
 
 function Card(props) {
   const levelArray = Array.from({ length: props.level }, (_, index) => (
-    <img src={props.levelImg} alt="" id="level" />
+    <img src={props.levelImg} alt="Imagem da carta" id="level" style={{ maxWidth: '600px' }}/>
   ));
 
   return (
@@ -16,7 +16,7 @@ function Card(props) {
             {levelArray}
           </div>
           <div className="attributeContainer">
-          <img src={props.attribute} alt="Light" id="cardAttribute" />
+          <img src={props.attribute} alt="Atributo da carta" id="cardAttribute"/>
           </div>
         </div>
 

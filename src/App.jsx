@@ -14,13 +14,17 @@ import AttributeSpell from "./card/images/attributes/SPELL.png";
 import AttributeTrap from "./card/images/attributes/TRAP.png";
 import monsterReborn from "./card/images/monsterReborn.jpeg";
 import solemnJudgment from "./card/images/SolemnJudgment.webp";
+import indexCardImage from "./card/images/indexCardImage.png"
 
 function App() {
+  var cardImagemForm = document.getElementById('cardImagemForm');
+
+
   const [cardVariable, setCardVariable] = useState({
     level: 1,
     attack: 0,
     defense: 0,
-    cardImage: null,
+    cardImage: indexCardImage,
     cardType: "monster",
     attribute: AttributeLight,
   }); // Estado local para o nível
@@ -127,14 +131,31 @@ function App() {
 
           <div>
             <span>Imagem</span>
-            <input type="file" id="cardImagem" />
+            <input
+              type="file"
+              id="cardImagemForm"
+              accept="image/*"
+              onChange={(e) => {
+                const file = e.target.files[0];
+                const reader = new FileReader();
+
+                reader.onload = (event) => {
+                  setCardVariable({
+                    ...cardVariable,
+                    cardImage: event.target.result, // Atualiza cardImage com o conteúdo da imagem
+                  });
+                };
+
+                reader.readAsDataURL(file);
+              }}
+            />
           </div>
           <button>Gerar</button>
         </form>
       </section>
       <Card
         cardType={cardVariable.cardType}
-        cardImg={BlueEyesWhiteDragon}
+        cardImg={cardVariable.cardImage}
         levelImg={levelImg}
         level={cardVariable.level}
         attribute={cardVariable.attribute}
